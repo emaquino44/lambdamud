@@ -3,6 +3,7 @@ import './login.css';
 import axios from 'axios';
 import Pusher from 'pusher-js';
 import { Button } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 
 
@@ -47,6 +48,9 @@ componentDidMount() {
     render() {
         return (
             <div className="game-interface-container">
+            <div>
+              <Link to='/'><button className="login-button-back">Back</button></Link>
+            </div>
             <div>
             <p> UUID: {this.state.uuid} </p>
             <p> CURRENT ROOM: {this.state.title}  </p>
